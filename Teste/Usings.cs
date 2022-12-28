@@ -1,0 +1,5 @@
+global using Microsoft.VisualStudio.TestTools.UnitTesting;
+global using PortsAndAdapters_And_CleanArchitecture.Models;
+global using PortsAndAdapters_And_CleanArchitecture.Services;
+global using PortsAndAdapters_And_CleanArchitecture.Data;
+global using PortsAndAdapters_And_CleanArchitecture.UseCases;

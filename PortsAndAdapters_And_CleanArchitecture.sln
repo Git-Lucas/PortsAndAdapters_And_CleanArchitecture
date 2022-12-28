@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortsAndAdapters_And_CleanArchitecture", "PortsAndAdapters_And_CleanArchitecture\PortsAndAdapters_And_CleanArchitecture.csproj", "{7E89C9F6-0BF8-462B-BD19-096537D6BD3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste", "Teste\Teste.csproj", "{0FDA4F37-A7C6-4B2A-989D-42806844FFDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E89C9F6-0BF8-462B-BD19-096537D6BD3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E89C9F6-0BF8-462B-BD19-096537D6BD3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E89C9F6-0BF8-462B-BD19-096537D6BD3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E89C9F6-0BF8-462B-BD19-096537D6BD3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FDA4F37-A7C6-4B2A-989D-42806844FFDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FDA4F37-A7C6-4B2A-989D-42806844FFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FDA4F37-A7C6-4B2A-989D-42806844FFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FDA4F37-A7C6-4B2A-989D-42806844FFDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D03486F6-2FA1-40CB-B4CD-E4CA42CFBD21}
+	EndGlobalSection
+EndGlobal
