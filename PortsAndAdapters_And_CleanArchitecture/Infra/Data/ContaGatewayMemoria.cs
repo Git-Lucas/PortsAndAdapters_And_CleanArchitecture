@@ -1,8 +1,9 @@
 ﻿//Interface Adapter, que implementa os métodos exigidos na interface para manipulação dos arquivos (neste caso,
 //implementando os dados em memória)
-using PortsAndAdapters_And_CleanArchitecture.Models;
+using PortsAndAdapters_And_CleanArchitecture.Domain.Data;
+using PortsAndAdapters_And_CleanArchitecture.Domain.Models;
 
-namespace PortsAndAdapters_And_CleanArchitecture.Data
+namespace PortsAndAdapters_And_CleanArchitecture.Infra.Data
 {
     public class ContaGatewayMemoria : IContaGateway
     {
@@ -16,6 +17,7 @@ namespace PortsAndAdapters_And_CleanArchitecture.Data
         public async Task<Conta> GetAsync(string id)
         {
             var conta = Contas.SingleOrDefault(x => x.Id == id);
+
             if (conta is not null)
                 return conta;
             else

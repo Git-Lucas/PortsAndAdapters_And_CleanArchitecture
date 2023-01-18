@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PortsAndAdapters_And_CleanArchitecture.Models;
+using PortsAndAdapters_And_CleanArchitecture.Domain.Models;
 
-namespace PortsAndAdapters_And_CleanArchitecture.Data
+namespace PortsAndAdapters_And_CleanArchitecture.Infra.EntityFramework
 {
     public class EfSqliteAdapter : DbContext
     {

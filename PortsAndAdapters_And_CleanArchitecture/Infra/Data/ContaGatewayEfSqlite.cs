@@ -1,9 +1,11 @@
 ﻿//Interface Adapter, que implementa os métodos exigidos na interface para manipulação dos arquivos (neste caso,
 //o Interface Adapter está totalmente acoplado ao EF. Isso não é recomendado)
 using Microsoft.EntityFrameworkCore;
-using PortsAndAdapters_And_CleanArchitecture.Models;
+using PortsAndAdapters_And_CleanArchitecture.Domain.Data;
+using PortsAndAdapters_And_CleanArchitecture.Domain.Models;
+using PortsAndAdapters_And_CleanArchitecture.Infra.EntityFramework;
 
-namespace PortsAndAdapters_And_CleanArchitecture.Data
+namespace PortsAndAdapters_And_CleanArchitecture.Infra.Data
 {
     public class ContaGatewayEfSqlite : IContaGateway
     {
@@ -17,11 +19,13 @@ namespace PortsAndAdapters_And_CleanArchitecture.Data
         public async Task CreateAsync(Conta conta)
         {
             var contaExistente = await _context.Contas.SingleOrDefaultAsync(x => x.Id == conta.Id);
+
             if (contaExistente is not null)
             {
                 _context.Contas.Remove(contaExistente);
                 await _context.SaveChangesAsync();
             }
+
             _context.Add(conta);
             await _context.SaveChangesAsync();
         }
@@ -29,6 +33,7 @@ namespace PortsAndAdapters_And_CleanArchitecture.Data
         public async Task<Conta> GetAsync(string id)
         {
             var conta = await _context.Contas.SingleOrDefaultAsync(x => x.Id == id);
+
             if (conta is not null)
                 return conta;
             else

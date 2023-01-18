@@ -1,5 +1,6 @@
 ﻿//Para o Clean Architechture, "Conta" é uma entidade (regra de negócio)
-namespace PortsAndAdapters_And_CleanArchitecture.Models
+
+namespace PortsAndAdapters_And_CleanArchitecture.Domain.Models
 {
     public class Conta
     {

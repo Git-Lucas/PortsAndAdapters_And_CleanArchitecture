@@ -1,3 +1,5 @@
+using PortsAndAdapters_And_CleanArchitecture.Domain.Models;
+
 namespace Teste
 {
     [TestClass]

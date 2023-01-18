@@ -2,8 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using PortsAndAdapters_And_CleanArchitecture.Data;
+using PortsAndAdapters_And_CleanArchitecture.Infra.EntityFramework;
 
 #nullable disable
 

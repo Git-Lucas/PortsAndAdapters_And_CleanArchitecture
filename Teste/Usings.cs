@@ -1,5 +1,6 @@
 global using Microsoft.VisualStudio.TestTools.UnitTesting;
-global using PortsAndAdapters_And_CleanArchitecture.Models;
-global using PortsAndAdapters_And_CleanArchitecture.Services;
-global using PortsAndAdapters_And_CleanArchitecture.Data;
-global using PortsAndAdapters_And_CleanArchitecture.UseCases;
+global using PortsAndAdapters_And_CleanArchitecture.Domain.Models;
+global using PortsAndAdapters_And_CleanArchitecture.Domain.Services;
+global using PortsAndAdapters_And_CleanArchitecture.Infra.Data;
+global using PortsAndAdapters_And_CleanArchitecture.Infra.EntityFramework;
+global using PortsAndAdapters_And_CleanArchitecture.Application;

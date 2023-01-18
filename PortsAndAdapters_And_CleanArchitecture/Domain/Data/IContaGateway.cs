@@ -2,9 +2,9 @@
 //dados)
 //Qualquer classe que implementar esta interface, estará implementando os métodos CRUD (independente do
 //repositório)
-using PortsAndAdapters_And_CleanArchitecture.Models;
+using PortsAndAdapters_And_CleanArchitecture.Domain.Models;
 
-namespace PortsAndAdapters_And_CleanArchitecture.Data
+namespace PortsAndAdapters_And_CleanArchitecture.Domain.Data
 {
     public interface IContaGateway
     {
