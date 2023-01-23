@@ -50,7 +50,7 @@ namespace PortsAndAdapters_And_CleanArchitecture.Infra.Data
                 throw new Exception("A pesquisa não retornou nenhum resultado.");
         }
 
-        public async Task<Conta> UpdateAsync(Conta conta)
+        public async Task UpdateAsync(Conta conta)
         {
             var contaExistente = await GetAsync(conta.Id);
 
@@ -59,7 +59,6 @@ namespace PortsAndAdapters_And_CleanArchitecture.Infra.Data
                 contaExistente.Saldo = conta.Saldo;
                 _context.Contas.Update(contaExistente);
                 await _context.SaveChangesAsync();
-                return await GetAsync(conta.Id);
             }
             else
                 throw new Exception("Não foi possível atualizar.");

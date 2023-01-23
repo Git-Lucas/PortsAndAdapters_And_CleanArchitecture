@@ -11,10 +11,10 @@ namespace Teste
         {
             var transferenciaService = new TransferenciaService();
             var origem = new Conta("584325");
-            origem.Credita(200);
+            origem.Creditar(200);
             var destino = new Conta("851886");
             var valor = 100;
-            transferenciaService.Transfere(origem, destino, valor);
+            transferenciaService.Transferir(origem, destino, valor);
             Assert.AreEqual(100, origem.Saldo);
             Assert.AreEqual(100, destino.Saldo);
         }

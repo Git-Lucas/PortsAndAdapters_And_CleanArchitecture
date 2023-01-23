@@ -32,14 +32,13 @@ namespace PortsAndAdapters_And_CleanArchitecture.Infra.Data
                 throw new Exception("A pesquisa não retornou nenhum resultado.");
         }
 
-        public async Task<Conta> UpdateAsync(Conta conta)
+        public async Task UpdateAsync(Conta conta)
         {
             var contaExistente = await GetAsync(conta.Id);
 
-            if (conta is not null)
+            if (contaExistente is not null)
             {
                 contaExistente.Saldo = conta.Saldo;
-                return contaExistente;
             }
             else
                 throw new Exception("Não foi possível atualizar.");

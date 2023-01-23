@@ -20,11 +20,11 @@ namespace PortsAndAdapters_And_CleanArchitecture.Application
         //Service e para a instância de banco de dados.
         //No caso de qualquer alteração na tabela ou na entidade "Conta", este intermediador não sofreria
         //efeitos colaterais, pelo fato de estar apenas interligando os serviços de domínio ao core da aplicação
-        public async Task<bool> Executar(string idOrigem, string idDestino, double valor)
+        public async Task<bool> Transferir(string idOrigem, string idDestino, double valor)
         {
             var origem = await _contaGateway.GetAsync(idOrigem);
             var destino = await _contaGateway.GetAsync(idDestino);
-            _transferenciaService.Transfere(origem, destino, valor);
+            _transferenciaService.Transferir(origem, destino, valor);
             await _contaGateway.UpdateAsync(origem);
             await _contaGateway.UpdateAsync(destino);
             return true;

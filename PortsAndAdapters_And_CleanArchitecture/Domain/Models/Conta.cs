@@ -16,14 +16,14 @@ namespace PortsAndAdapters_And_CleanArchitecture.Domain.Models
             Id = identificador;
         }
 
-        public void Credita(double valor)
+        public void Creditar(double valor)
         {
             if (valor <= 0)
                 throw new ArgumentOutOfRangeException("Valor inválido.");
             Saldo += valor;
         }
 
-        public void Debita(double valor)
+        public void Debitar(double valor)
         {
             if (valor > Saldo || valor < 0)
                 throw new ArgumentOutOfRangeException("Valor inválido.");

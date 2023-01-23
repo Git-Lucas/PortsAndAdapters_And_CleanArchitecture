@@ -10,8 +10,9 @@
             var conta = new Conta("543126");
             await contaGateway.CreateAsync(conta);
             conta = await contaGateway.GetAsync(conta.Id);
-            conta.Credita(50);
-            var contaAtualizada = await contaGateway.UpdateAsync(conta);
+            conta.Creditar(50);
+            await contaGateway.UpdateAsync(conta);
+            var contaAtualizada = await contaGateway.GetAsync(conta.Id);
             Assert.AreEqual(50, contaAtualizada.Saldo);
         }
 
@@ -22,8 +23,9 @@
             var conta = new Conta("543126");
             await contaGateway.CreateAsync(conta);
             conta = await contaGateway.GetAsync(conta.Id);
-            conta.Credita(50);
-            var contaAtualizada = await contaGateway.UpdateAsync(conta);
+            conta.Creditar(50);
+            await contaGateway.UpdateAsync(conta);
+            var contaAtualizada = await contaGateway.GetAsync(conta.Id);
             Assert.AreEqual(50, contaAtualizada.Saldo);
         }
 

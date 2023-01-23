@@ -7,10 +7,10 @@ namespace PortsAndAdapters_And_CleanArchitecture.Domain.Services
 {
     public class TransferenciaService
     {
-        public void Transfere(Conta origem, Conta destino, double valor)
+        public void Transferir(Conta origem, Conta destino, double valor)
         {
-            origem.Debita(valor);
-            destino.Credita(valor);
+            origem.Debitar(valor);
+            destino.Creditar(valor);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace PortsAndAdapters_And_CleanArchitecture.Domain.Data
         Task CreateAsync(Conta conta);
         Task<Conta> GetAsync(string id);
         Task<List<Conta>> GetAllAsync();
-        Task<Conta> UpdateAsync(Conta conta);
+        Task UpdateAsync(Conta conta);
         Task DeleteAsync(string id);
     }
 }
